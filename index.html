@@ -47,7 +47,7 @@
     <div class="container">
         <div class="row">
             <div class="col">
-                <h3>老後マネーシミュレーター</h3>
+                <h3>老後資金シミュレーター</h3>
             </div>
         </div>
         <div class="row">
@@ -84,7 +84,7 @@
                     </div>
 
                     <div class="form-group">
-                        <label for="annualExpensesAfterRetirement" class="bmd-label-floating">退職後毎月の生活費(万円)</label>
+                        <label for="annualExpensesAfterRetirement" class="bmd-label-floating">退職後毎月取り崩し希望額(万円)</label>
                         <input type="number" pattern="\d*" class="form-control" id="annualExpensesAfterRetirement" name="annualExpensesAfterRetirement" value="30" required>
                     </div>
 
@@ -157,12 +157,12 @@
 
     <script>$(document).ready(function () { $('body').bootstrapMaterialDesign(); });</script>
     <script id="myDigestTmpl" type="text/x-jsrender">
-        <p class="lead">{{:retirementAge}} 歳で退職して、退職後の生活費が毎月 ¥{{dec:monthlyExpensesAfterRetirement}} の場合、退職までの間毎年必要になる貯蓄額は現在の年収の {{:requiredSavingsPercentage.toFixed(2)}}% で、つまり</p>
+        <p class="lead">{{:retirementAge}} 歳で退職して、退職後月間取り崩し希望額が ¥{{dec:monthlyExpensesAfterRetirement}} の場合、退職までの間毎年必要になる貯蓄額は現在の年収の {{:requiredSavingsPercentage.toFixed(2)}}% で、つまり</p>
         <hr class="my-4">
         <h1>
             ¥{{dec:requiredSavings}}
         </h1>
-        <p>(退職時の必要とする貯蓄残高は¥{{dec:requireAllMoneyWhenRetired}})</p>
+        <p>(退職時の必要貯蓄額は¥{{dec:requireAllMoneyWhenRetired}})</p>
     </script>
     <script id="myListTmpl" type="text/x-jsrender">
         <tr>
